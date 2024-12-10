@@ -23,10 +23,6 @@ ENTITY_SPEED = {
     'Enemy2': 1,
 }
 
-# S
-SPAWN_TIME = 4000
-
-
 # M
 MENU_OPTION = ('NEW GAME 1P',
                'NEW GAME 2P - COOPERATIVE',
@@ -45,6 +41,11 @@ PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
 PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
                     'Player2': pygame.K_LCTRL}
+
+
+# S
+SPAWN_TIME = 4000
+
 
 # W
 WIN_WIDTH = 550
