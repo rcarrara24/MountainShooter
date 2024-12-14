@@ -1,9 +1,12 @@
 # C
 import pygame
 
-COLOR_PINK = (255, 20, 147)
-COLOR_WHITE = (255, 255, 255)
-COLOR_YELLOW = (255, 255, 0)
+C_PINK = (255, 20, 147)
+C_WHITE = (255, 255, 255)
+C_YELLOW = (255, 255, 0)
+C_GREEN = (0, 128, 0)
+C_CYAN = (0, 128, 128)
+
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -37,14 +40,54 @@ ENTITY_HEALTH = {
     'level1bg6': 999,
     'level1bg7': 999,
     'level1bg8': 999,
-    'Player1': 300,
+    'Player1': 100,
     'Player1Shot': 1,
-    'Player2': 300,
+    'Player2': 150,
     'Player2Shot': 1,
     'Enemy1': 50,
     'Enemy1Shot': 1,
     'Enemy2': 60,
     'Enemy2Shot': 1,
+}
+
+ENTITY_DAMAGE = {
+    'level1bg0': 0,
+    'level1bg1': 0,
+    'level1bg2': 0,
+    'level1bg3': 0,
+    'level1bg4': 0,
+    'level1bg5': 0,
+    'level1bg6': 0,
+    'level1bg7': 0,
+    'level1bg8': 0,
+    'Player1': 1,
+    'Player1Shot': 25,
+    'Player2': 1,
+    'Player2Shot': 20,
+    'Enemy1': 1,
+    'Enemy1Shot': 20,
+    'Enemy2': 1,
+    'Enemy2Shot': 15,
+}
+
+ENTITY_SCORE = {
+    'level1bg0': 0,
+    'level1bg1': 0,
+    'level1bg2': 0,
+    'level1bg3': 0,
+    'level1bg4': 0,
+    'level1bg5': 0,
+    'level1bg6': 0,
+    'level1bg7': 0,
+    'level1bg8': 0,
+    'Player1': 0,
+    'Player1Shot': 0,
+    'Player2': 0,
+    'Player2Shot': 0,
+    'Enemy1': 100,
+    'Enemy1Shot': 0,
+    'Enemy2': 125,
+    'Enemy2Shot': 0,
 }
 
 ENTITY_SHOT_DELAY = {
@@ -79,5 +122,5 @@ SPAWN_TIME = 4000
 
 
 # W
-WIN_WIDTH = 550
-WIN_HEIGHT = 350
+WIN_WIDTH = 576
+WIN_HEIGHT = 324

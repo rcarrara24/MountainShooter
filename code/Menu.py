@@ -1,4 +1,4 @@
-from .Const import WIN_WIDTH, COLOR_PINK, MENU_OPTION, COLOR_WHITE, COLOR_YELLOW
+from .Const import WIN_WIDTH, C_PINK, MENU_OPTION, C_WHITE, C_YELLOW
 
 import pygame.image
 from pygame import Surface, Rect
@@ -18,14 +18,14 @@ class Menu:
         while True:
             # draw images
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, "Buildings", COLOR_PINK, ((WIN_WIDTH / 2), 100))
-            self.menu_text(50, "Modern", COLOR_PINK, ((WIN_WIDTH / 2), 40))
+            self.menu_text(50, "Buildings", C_PINK, ((WIN_WIDTH / 2), 100))
+            self.menu_text(50, "Modern", C_PINK, ((WIN_WIDTH / 2), 40))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(20, MENU_OPTION[i], COLOR_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
+                    self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
                 else:
-                    self.menu_text(20, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
+                    self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
             pygame.display.flip()
 
             # Check for all events
