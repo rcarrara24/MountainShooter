@@ -23,9 +23,10 @@ class Score:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.score_text(48, 'YOU WIN', C_YELLOW, SCORE_POS['Title'])
+            text = 'Enter Player 1 name (4 characters):'
+            score = player_score[0]
             if game_mode == MENU_OPTION[0]:
                 score = player_score[0]
-                text = 'Enter Player 1 name (4 characters):'
             if game_mode == MENU_OPTION[1]:
                 score = (player_score[0] + player_score[1]) / 2
                 text = 'Enter Team name (4 characters):'
@@ -46,13 +47,13 @@ class Score:
                     if event.key == K_RETURN and len(name) == 4:
                         db_proxy.save({'name': name, 'score': score, 'date': get_formatted_date()})
                         self.show()
+                        return
                     elif event.key == K_BACKSPACE:
                         name = name[:-1]
                     else:
                         if len(name) < 4:
                             name += event.unicode
             self.score_text(20, name, C_WHITE, SCORE_POS['Name'])
-
             pygame.display.flip()
             pass
 
@@ -84,6 +85,7 @@ class Score:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
+
 
 def get_formatted_date():
     current_datetime = datetime.now()
